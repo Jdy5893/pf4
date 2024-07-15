@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>독도체험관</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- 슬릭 -->
+    <script src="js/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".titleAni").slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: false,
+                autoplaySpeed: 2000,
+                dots: false,
+                infinite: true,
+                speed: 1500,
+                cssEase: 'ease-out',
+                arrows: true,
+                fade: false
+            });
+            $(".newsAni").slick({
+                slidesToShow: 2.5,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: false,
+                infinite: false,
+                speed: 1500,
+                cssEase: 'ease-out',
+                arrows: true,
+                fade: false,
+                pauseOnHover: true
+            });
+            var sw = 0;
+            $('.btn_pause').click(function(){
+                if(sw==0){
+                    $('.btn_pause').addClass('on');
+                    $('.newsAni').slick('slickPause')
+                    sw = 1;
+                }else{
+                    $('.btn_pause').removeClass('on');
+                    $('.newsAni').slick('slickPlay')
+                    sw = 0;
+                    }
+            });
+            $("main section#news div.wrap button").wrapAll("<div class='wbtn'></div>");
+        });
+    </script>
+</head>
+<body>
+    <!-- 상단 -->
+    <header>
+        <div class="wrap flex">
+            <h1>
+                <a href="" class="block">독도체험관</a>
+            </h1>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="" class="block">체험관 소개</a></li>
+                    <li><a href="" class="block">관람 정보</a></li>
+                    <li><a href="" class="block">전시 안내</a></li>
+                    <li><a href="" class="block">독도 자료실</a></li>
+                    <li><a href="" class="block">열린광장</a></li>
+                </ul>
+                <ul class="enb">
+                    <li><a href="" class="block">로그인</a></li>
+                    <li><a href="" class="block">회원가입</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+     <!-- 타이틀 -->
+    <div id="title">
+        <div class="titleAni">
+            <div class="title-1">
+                <div class="wrap">
+                    <h2>대한민국 독도 세종에서 만나다</h2>
+                    <p class="h4">독도에 대한 의미를 되새기는 특별한 공간,<span class="block"></span>
+                        독도의 삶과 역사를 잊지 않기 위해 독도체험관이 앞장서겠습니다.
+                    </p>
+                    <a href="" class="block">전시안내 보기</a>
+                </div>
+            </div>
+            <div class="title-2">
+                <div class="wrap">
+                    <h2>대한민국 독도 세종에서 만나다</h2>
+                    <p class="h4">세종특별자치시교육청 독도체험관은 독도에 대한<span class="block"></span>
+                        올바른 이해와 영토 주권의식을 확산시키고자 마련된 공간입니다.
+                    </p>
+                    <a href="" class="block">전시안내 보기</a>
+                </div>
+            </div>
+        </div>
+        <p class="sm">scroll</p>
+        <a href="" class="block h4">단체예약<span class="block"></span>신청</a>
+    </div>
+      <!-- 메인 -->
+       <main>
+            <section id="info">
+                <div class="wrap">
+                    <div class="ref">
+                        <h2 class="h3">독도 바로알기</h2>
+                        <p class="h5">독도의 역사를 배우고, 자연을 체험하며 독도영토주권<span class="block"></span>
+                            수호 의지를 다질 수 있는 소중한 시간이 되기를 바랍니다.</p>
+                        <a href="" class="block h6">바로가기</a>
+                    </div>
+                    <div class="guid">
+                        <h2 class="h3">관람안내</h2>
+                        <p class="h2">044-999-6393</p>
+                        <a href="" class="block">관람 문의하기</a>
+                        <ul>
+                            <li>
+                                <strong>관람시간</strong>
+                                <p>화요일-토요일 9:00 ~ 17:00 <span class="block"></span>
+                                    (점심시간 12:00~13:00, 입장마감 16:30) <span class="block"></span>
+                                    <i>※ 관람시간은 학교 사정에 따라 변경될 수 있습니다.</i>
+                                </p>
+                            </li>
+                            <li><strong>휴관안내</strong>일요일, 월요일 및 공휴일</li>
+                            <li><strong>위치</strong>세종특별자치시 새롬서로 68 새롬고등학교 1층</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="news">
+                <div class="wrap">
+                    <h2 class="h1 bold">공지사항</h2>
+                    <p>독도의 미래를 생각하는 공간으로 <span class="block"></span>
+                        앞으로도 지속적으로 활용되기를 바랍니다.</p>
+                    <ul class="newsAni">
+                        <li class="news1">
+                            <a href="" class="block">
+                                <figure>
+                                    <img src="img/n1.jpg" alt="2024년 독도사랑 손글씨 공모전 안내">
+                                </figure>
+                                <strong class="h6">NEWS</strong>
+                                <h3 class="h4 bold">2024년 독도사랑 손글씨 공모전 안내</h3>
+                                <p>2024년 독도사랑 손글씨 공모전<span class="block"></span> ○ 공모일정   - 공모기간 : .....</p>
+                            </a>
+                        </li>
+                        <li class="news2">
+                            <a href="" class="block">
+                                <figure>
+                                    <img src="img/n2.jpg" alt="2024년 독도식물 섬기린초 나눔 행사 안내">
+                                </figure>
+                                <strong class="h6">NEWS</strong>
+                                <h3 class="h4 bold">2024년 독도식물 섬기린초 나눔 행사...</h3>
+                                <p>2024년 독도식물 섬기린초 나눔 행사 안내 <span class="block"></span>기간 : 2024. 5. 16.~5. 31. 대.....</p>
+                            </a>
+                        </li>
+                        <li class="news3">
+                            <a href="" class="block">
+                                <figure>
+                                    <img src="img/n3.jpg" alt="2024년 상반기 독도체험교실 안내">
+                                </figure>
+                                <strong class="h6">NEWS</strong>
+                                <h3 class="h4 bold">2024년 상반기 독도체험교실 안내</h3>
+                                <p>2024학년도 상반기 독도체험교실 행사안내 <span class="block"></span>1. 기간 : 2024.3.26.(화) ~ 2.....</p>
+                            </a>
+                        </li>
+                        <li class="news4">
+                            <a href="" class="block">
+                                <figure>
+                                    <img src="img/n4.jpg" alt="독도체험관 겨울방학 체험교실">
+                                </figure>
+                                <strong class="h6">NEWS</strong>
+                                <h3 class="h4 bold">독도체험관 겨울방학 체험교실</h3>
+                                <p>독도체험관 겨울방학 체험교실 안내<span class="block"></span>독도체험관 관람 후 독도퍼즐을 완성하신 분들께는&.....</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="btn_pause">정지</button>
+
+                </div>
+            </section>
+            <section id="space">
+                <div class="wrap">
+                    <h2>전시안내</h2>
+                    <a href="" class="block">
+                        <ul>
+                            <li>
+                                <h3 class="h3">체험존 안내</h3>
+                                <p>
+                                    독도체험관은 대한민국 동쪽 끝,
+                                    <span class="block"></span>
+                                    우리의 섬 독도를 만나는 체험 공간입니다.
+                                </p>
+                            </li>
+                            <li>
+                                <h3 class="h3">영상관 안내</h3>
+                                <p>
+                                    가상현실(VR)과 같은 최신 기법을 활용하여
+                                    <span class="block"></span>
+                                    실감형 콘텐츠 등을 적용한 독도 영상관입니다.
+                                </p>
+                            </li>
+                        </ul>
+                    </a>
+                </div>
+            </section>
+       </main>
+       <!-- 하단 -->
+       <footer>
+            <div class="dokdo">
+                <div class="wrap">
+                    <p class="h5">서도</p>
+                    <p class="h3">"경상북도 울릉읍 독도리 1-96"</p>
+                    <p class="h5">동도</p>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="wrap">
+                    <ul>
+                        <li><a href="" class="p">이용약관</a></li>
+                        <li><a href="" class="p">개인정보취급방침</a></li>
+                        <li><a href="" class="p">이메일주소무단수집거부</a></li>
+                    </ul>
+                    <address class="p">주소. (30126) 세종특별자치시 새롬서로 68 새롬고등학교 1층 독도체험관 <span>문의전화. 044-999-6393</span></address>
+                    <p class="h6">© 2022 Dokdo Exhibitonon All rights reserved .</p>
+                    <p>web 접근성</p>
+                    <a href="" class="block">독도체험관<span class="block"></span>오시는길</a>
+                </div>
+            </div>
+       </footer>
+</body>
+</html>
