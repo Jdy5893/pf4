@@ -179,6 +179,18 @@ header div.wrap nav ul.enb li:nth-child(2) a::before{
   padding-top: 40px;
   padding-bottom: 60px;
 }
+.pAni{
+  animation-name: move;
+  animation-duration: 0.5s;
+}
+@keyframes move{
+  0%{
+    transform: translateX(-50px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
 #title > div  div  div.wrap a {
   padding: 25px 35px;
   border: 3px solid;
@@ -215,6 +227,9 @@ header div.wrap nav ul.enb li:nth-child(2) a::before{
   background-size: contain;
   margin-left: 10px;
   transform: rotateZ(45deg);
+}
+.aAni{
+  animation-name: 
 }
 #title > p{
   color: #fff;
@@ -328,6 +343,7 @@ main section#info {
 main section#info div.wrap {
   display: flex;
   padding: 60px 0;
+  gap: 50px;
 }
 
 main section#info div.wrap div.ref {
@@ -415,7 +431,6 @@ main section#info div.wrap div.guid {
   column-gap: 40px;
   row-gap: 40px;
   padding: 60px;
-  padding-left: 110px;
   padding-bottom: 0;
 }
 main section#info div.wrap div.guid h2 {
@@ -729,7 +744,6 @@ footer div.dokdo{
   background-image: url(../img/bg_banner.jpg);
   height: 680px;
   border-radius: 180px 0 0 0;
-  background-size: cover;
 }
 footer div.dokdo div.wrap{
   display: flex;
@@ -765,7 +779,7 @@ footer div.dokdo div.wrap p:nth-child(2){
   white-space: nowrap;
   position: relative;
   color: rgba(66, 66, 66, 0.8);
-  line-height: 1.4;
+  line-height: 40px;
   /*! height: 40px; */
   /*! display: flex; */
   /*! align-items: center; */
@@ -781,7 +795,7 @@ footer div.dokdo div.wrap p:not(:nth-child(2))::before{
   display: block;
   width: 8px;
   height: 8px;
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
   border-radius: 50%;
   position: absolute;
   bottom: 0;
